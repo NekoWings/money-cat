@@ -1,0 +1,32 @@
+name: MoneyCat
+options:
+  minimumXcodeGenVersion: 2.38.0
+configs:
+  Debug: debug
+  Release: release
+settings:
+  base:
+    PRODUCT_BUNDLE_IDENTIFIER: com.example.moneycat
+    SWIFT_VERSION: 5.10
+targets:
+  MoneyCat:
+    type: application
+    platform: iOS
+    deploymentTarget: '17.0'
+    sources:
+      - path: MoneyCat
+    resources:
+      - path: MoneyCat/Resources
+    settings:
+      base:
+        INFOPLIST_FILE: MoneyCat/Resources/Info.plist
+        PRODUCT_NAME: MoneyCat
+        CODE_SIGN_STYLE: Automatic
+    info:
+      path: MoneyCat/Resources/Info.plist
+      properties:
+        UILaunchScreen: {}
+        UISupportedInterfaceOrientations:
+          - UIInterfaceOrientationPortrait
+        NSCameraUsageDescription: 用于扫描小票并识别消费项目。
+        NSPhotoLibraryUsageDescription: 允许从相册选择小票图片进行识别。
